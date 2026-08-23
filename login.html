@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Inicia sesión en PixelVault"
+    >
+
+    <title>Iniciar sesión | PixelVault</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/estilos.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/auth.css"
+    >
+
+    <!-- Bootstrap 5.3.3 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+
+    <style>
+        /* FIX DEFINITIVO: botones para mostrar/ocultar contraseña */
+        .auth-input {
+            position: relative;
+        }
+        .auth-input input {
+            flex: 1 1 auto;
+            width: 1%;
+        }
+        .auth-password-toggle {
+            position: relative;
+            z-index: 20;
+            flex: 0 0 43px;
+            width: 43px;
+            height: 45px;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            background: transparent;
+            color: #606978;
+            cursor: pointer;
+            pointer-events: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .auth-password-toggle:hover {
+            color: #a78bfa;
+        }
+        .auth-password-toggle i {
+            pointer-events: none;
+        }
+    </style>
+
+</head>
+
+
+<body class="auth-page">
+
+
+    <!-- =====================================================
+         TOPBAR
+    ====================================================== -->
+
+    <div class="auth-topbar">
+
+        <div class="auth-container auth-topbar-content">
+
+            <div class="auth-welcome">
+
+                <i class="fa-solid fa-gamepad"></i>
+
+                <span>
+                    Bienvenido a PixelVault
+                </span>
+
+            </div>
+
+
+            <div class="auth-top-links">
+
+                <a href="index.html#nosotros">
+                    Sobre nosotros
+                </a>
+
+                <a href="index.html#contacto">
+                    Contacto
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="auth-header">
+
+        <div class="auth-container auth-header-content">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="auth-brand"
+            >
+
+                <span class="auth-brand-main">
+
+                    <span class="auth-brand-pixel">
+                        PIXEL
+                    </span>
+
+                    <span class="auth-brand-vault">
+                        VAULT
+                    </span>
+
+                </span>
+
+                <span class="auth-brand-subtitle">
+                    GAME STORE
+                </span>
+
+            </a>
+
+
+            <!-- NAV -->
+
+            <nav class="auth-nav">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <a href="index.html#categorias">
+                    Explorar
+                </a>
+
+                <a href="index.html#destacados">
+                    Destacados
+                </a>
+
+                <a href="index.html#ofertas">
+                    Ofertas
+                </a>
+
+                <a href="index.html#nosotros">
+                    Nosotros
+                </a>
+
+            </nav>
+
+
+            <!-- ACCIONES -->
+
+            <div class="auth-header-actions">
+
+                <button
+                    type="button"
+                    class="auth-header-action"
+                    aria-label="Buscar"
+                >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+
+                <a
+                    href="login.html"
+                    class="auth-header-action auth-user-action"
+                    aria-label="Cuenta"
+                >
+
+                    <i class="fa-solid fa-user"></i>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="auth-header-action"
+                    aria-label="Carrito"
+                >
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span class="auth-cart-count">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="auth-main d-block">
+
+        <div class="auth-container">
+
+
+            <!-- VOLVER -->
+
+            <a
+                href="index.html"
+                class="auth-back"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                <span>
+                    Volver a PixelVault
+                </span>
+
+            </a>
+
+
+            <!-- LAYOUT -->
+
+            <div class="auth-login-layout">
+
+
+                <!-- =================================================
+                     PRESENTACIÓN
+                ================================================== -->
+
+                <section class="auth-intro">
+
+                    <div class="auth-kicker">
+
+                        <i class="fa-solid fa-right-to-bracket"></i>
+
+                        <span>
+                            ACCESO DE JUGADOR
+                        </span>
+
+                    </div>
+
+
+                    <h1>
+
+                        BIENVENIDO A
+
+                        <span>
+                            PIXELVAULT
+                        </span>
+
+                    </h1>
+
+
+                    <p class="auth-intro-description">
+
+                        Inicia sesión para acceder a tu cuenta,
+                        revisar tus preferencias y continuar
+                        disfrutando de PixelVault.
+
+                    </p>
+
+
+                    <div class="auth-feature-list">
+
+
+                        <div class="auth-feature">
+
+                            <span class="auth-feature-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+
+                            <span>
+                                Acceso personalizado
+                            </span>
+
+                        </div>
+
+
+                        <div class="auth-feature">
+
+                            <span class="auth-feature-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+
+                            <span>
+                                Información protegida
+                            </span>
+
+                        </div>
+
+
+                        <div class="auth-feature">
+
+                            <span class="auth-feature-icon">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+
+                            <span>
+                                Tu experiencia gamer
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="auth-mini-stats">
+
+                        <div>
+
+                            <strong>
+                                24/7
+                            </strong>
+
+                            <span>
+                                ACCESO
+                            </span>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                100%
+                            </strong>
+
+                            <span>
+                                PIXELVAULT
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =================================================
+                     LOGIN
+                ================================================== -->
+
+                <section class="auth-card">
+
+
+                    <div class="auth-card-top">
+
+                        <span>
+                            ACCESO DE JUGADOR
+                        </span>
+
+                        <i class="fa-solid fa-gamepad"></i>
+
+                    </div>
+
+
+                    <div class="auth-heading">
+
+                        <h2>
+
+                            Iniciar
+                            <span>
+                                sesión
+                            </span>
+
+                        </h2>
+
+                        <p>
+                            Ingresa tus datos para continuar.
+                        </p>
+
+                    </div>
+
+
+                    <!-- FORM -->
+
+                    <form
+                        id="loginForm"
+                        class="auth-form"
+                        novalidate
+                    >
+
+
+                        <!-- USUARIO -->
+
+                        <div class="auth-field">
+
+                            <label for="loginUsuario">
+                                USUARIO O CORREO ELECTRÓNICO
+                            </label>
+
+                            <div class="auth-input">
+
+                                <i class="fa-solid fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="loginUsuario"
+                                    name="usuario"
+                                    placeholder="Usuario o correo"
+                                    autocomplete="username"
+                                    required
+                                >
+
+                            </div>
+
+                            <small
+                                class="auth-error"
+                                id="loginUsuarioError"
+                            ></small>
+
+                        </div>
+
+
+                        <!-- CONTRASEÑA -->
+
+                        <div class="auth-field">
+
+                            <div class="auth-label-row">
+
+                                <label for="loginClave">
+                                    CLAVE DE INGRESO
+                                </label>
+
+                                <a
+                                    href="#"
+                                    class="auth-forgot"
+                                    id="forgotPassword"
+                                >
+                                    ¿Olvidaste tu clave?
+                                </a>
+
+                            </div>
+
+
+                            <div class="auth-input">
+
+                                <i class="fa-solid fa-lock"></i>
+
+                                <input
+                                    type="password"
+                                    id="loginClave"
+                                    name="clave"
+                                    placeholder="Ingresa tu contraseña"
+                                    autocomplete="current-password"
+                                    required
+                                >
+
+                                <button type="button" class="auth-password-toggle" data-target="loginClave" aria-label="Mostrar contraseña" title="Mostrar contraseña" onclick="togglePixelVaultPassword(this); return false;">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+
+                            </div>
+
+                            <small
+                                class="auth-error"
+                                id="loginClaveError"
+                            ></small>
+
+                        </div>
+
+
+                        <!-- OPCIONES -->
+
+                        <div class="auth-options">
+
+
+                            <label class="auth-checkbox">
+
+                                <input
+                                    type="checkbox"
+                                    id="recordarme"
+                                >
+
+                                <span class="auth-checkmark">
+                                    <i class="fa-solid fa-check"></i>
+                                </span>
+
+                                <span>
+                                    Recordarme
+                                </span>
+
+                            </label>
+
+
+                        </div>
+
+
+                        <!-- MENSAJE -->
+
+                        <div
+                            id="loginMessage"
+                            class="auth-message"
+                            role="alert"
+                        ></div>
+
+
+                        <!-- BOTÓN -->
+
+                        <button
+                            type="submit"
+                            class="auth-submit"
+                        >
+
+                            <span>
+                                INICIAR SESIÓN
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+
+                    </form>
+
+
+                    <!-- DIVISOR -->
+
+                    <div class="auth-divider">
+
+                        <span>
+                            O
+                        </span>
+
+                    </div>
+
+
+                    <!-- REGISTRO -->
+
+                    <div class="auth-switch">
+
+                        <span>
+                            ¿No tienes una cuenta?
+                        </span>
+
+                        <a href="registro.html">
+
+                            CREAR CUENTA
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- JS -->
+
+    
+    <script>
+        function togglePixelVaultPassword(button) {
+            const targetId = button.getAttribute('data-target');
+            const input = document.getElementById(targetId);
+            if (!input) return;
+
+            const icon = button.querySelector('i');
+            const show = input.type === 'password';
+
+            input.type = show ? 'text' : 'password';
+
+            if (icon) {
+                icon.classList.toggle('fa-eye', !show);
+                icon.classList.toggle('fa-eye-slash', show);
+            }
+
+            button.setAttribute('aria-label', show ? 'Ocultar contraseña' : 'Mostrar contraseña');
+            button.setAttribute('title', show ? 'Ocultar contraseña' : 'Mostrar contraseña');
+        }
+    </script>
+
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>

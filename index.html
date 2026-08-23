@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="PixelVault - Tienda online de videojuegos">
+
+    <meta name="author"
+          content="PixelVault">
+
+    <title>PixelVault | Tienda de Videojuegos</title>
+
+    <!-- BOOTSTRAP: estructura responsive -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- CSS PERSONALIZADO PIXELVAULT -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- ICONOS - lo podemos cambiar después si quieres -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         BARRA SUPERIOR
+    ====================================================== -->
+
+    <div class="top-bar">
+
+        <div class="container top-bar-content">
+
+            <p class="top-bar-message">
+                🎮 Bienvenido a PixelVault
+            </p>
+
+            <div class="top-bar-links">
+
+                <a href="#nosotros">
+                    Sobre nosotros
+                </a>
+
+                <a href="#contacto">
+                    Contacto
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HEADER PRINCIPAL
+    ====================================================== -->
+
+    <header class="header">
+
+        <div class="container header-content">
+
+
+            <!-- LOGO -->
+
+            <div class="brand">
+
+                <a href="index.html"
+                   class="brand-link">
+
+                    <span class="brand-pixel">
+                        PIXEL
+                    </span>
+
+                    <span class="brand-vault">
+                        VAULT
+                    </span>
+
+                </a>
+
+                <span class="brand-subtitle">
+                    GAME STORE
+                </span>
+
+            </div>
+
+
+
+            <!-- NAVEGACIÓN -->
+
+            <nav class="main-nav">
+
+                <ul class="nav-list">
+
+                    <li class="nav-item">
+                        <a href="index.html"
+                           class="nav-link active">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#jugadores"
+                           class="nav-link">
+                            Explorar
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#destacados"
+                           class="nav-link">
+                            Destacados
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#ofertas"
+                           class="nav-link">
+                            Ofertas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#nosotros"
+                           class="nav-link">
+                            Nosotros
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+
+            <!-- ACCIONES HEADER -->
+
+            <div class="header-actions">
+
+                <button class="header-action search-button"
+                        type="button"
+                        aria-label="Buscar">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </button>
+
+
+                <a href="login.html"
+                    class="header-action user-button"
+                    aria-label="Iniciar sesión"
+                    title="Iniciar sesión">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+
+
+                <a href="#"
+                   class="header-action cart-button"
+                   aria-label="Carrito">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span class="cart-count">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+    ====================================================== -->
+
+    
+    <!-- BUSCADOR DE SECCIONES -->
+    <div class="section-search-panel" id="sectionSearchPanel" aria-hidden="true">
+        <div class="section-search-box" role="dialog" aria-modal="true" aria-label="Buscar sección">
+
+            <div class="section-search-header">
+                <div>
+                    <span>PIXELVAULT</span>
+                    <h3>¿QUÉ QUIERES EXPLORAR?</h3>
+                </div>
+                <button type="button" id="closeSectionSearch" aria-label="Cerrar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="section-search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search"
+                       id="sectionSearchInput"
+                       placeholder="Buscar una sección..."
+                       autocomplete="off">
+            </div>
+
+            <div class="section-search-results" id="sectionSearchResults">
+
+                <a href="#jugadores" class="section-search-item"
+                   data-search="catalogo categorías categoria accion aventura rpg terror deportes explorar">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <div>
+                        <strong>Explorar catálogo</strong>
+                        <span>Acción · Aventura · RPG · Terror · Deportes</span>
+                    </div>
+                </a>
+
+                <a href="#destacados" class="section-search-item"
+                   data-search="destacados juegos recomendados selección">
+                    <i class="fa-solid fa-star"></i>
+                    <div>
+                        <strong>Destacados</strong>
+                        <span>Juegos seleccionados de PixelVault</span>
+                    </div>
+                </a>
+
+                <a href="#novedades" class="section-search-item"
+                   data-search="novedades nuevos lanzamientos recientes">
+                    <i class="fa-solid fa-bolt"></i>
+                    <div>
+                        <strong>Novedades</strong>
+                        <span>Descubre los juegos más recientes</span>
+                    </div>
+                </a>
+
+                <a href="#ofertas" class="section-search-item"
+                   data-search="ofertas descuentos promociones">
+                    <i class="fa-solid fa-tags"></i>
+                    <div>
+                        <strong>Ofertas</strong>
+                        <span>Promociones y juegos con descuento</span>
+                    </div>
+                </a>
+
+                <a href="#nosotros" class="section-search-item"
+                   data-search="nosotros empresa pixelvault quienes somos">
+                    <i class="fa-solid fa-users"></i>
+                    <div>
+                        <strong>Nosotros</strong>
+                        <span>Conoce PixelVault</span>
+                    </div>
+                </a>
+
+                <a href="#contacto" class="section-search-item"
+                   data-search="contacto soporte ayuda">
+                    <i class="fa-solid fa-headset"></i>
+                    <div>
+                        <strong>Contacto</strong>
+                        <span>Soporte y ayuda de PixelVault</span>
+                    </div>
+                </a>
+
+                <div class="section-search-empty" id="sectionSearchEmpty">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <strong>No encontramos esa sección</strong>
+                    <span>Prueba con catálogo, ofertas, novedades o destacados.</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero">
+
+            <div class="hero-background"></div>
+
+            <div class="container hero-container">
+
+
+                <div class="hero-content">
+
+
+                    <span class="hero-tag">
+
+                        <i class="fa-solid fa-gamepad"></i>
+
+                        TIENDA DE VIDEOJUEGOS
+
+                    </span>
+
+
+                    <h1 class="hero-title">
+
+                        TU PRÓXIMA
+
+                        <span>
+                            AVENTURA
+                        </span>
+
+                        COMIENZA AQUÍ
+
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        Descubre un catálogo de videojuegos
+                        seleccionado para todos los jugadores.
+                        Encuentra acción, aventura, RPG,
+                        deportes y terror en un solo lugar.
+
+                    </p>
+
+
+                    <div class="hero-buttons d-flex flex-column flex-sm-row">
+
+                        <a href="#jugadores"
+                           class="btn btn-primary">
+
+                            <span>
+                                EXPLORAR CATÁLOGO
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <a href="#destacados"
+                           class="btn btn-secondary">
+
+                            VER DESTACADOS
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-stats d-flex flex-wrap">
+
+
+                        <div class="hero-stat">
+
+                            <strong>
+                                5
+                            </strong>
+
+                            <span>
+                                Categorías
+                            </span>
+
+                        </div>
+
+
+                        <div class="hero-stat">
+
+                            <strong>
+                                +10
+                            </strong>
+
+                            <span>
+                                Videojuegos
+                            </span>
+
+                        </div>
+
+
+                        <div class="hero-stat">
+
+                            <strong>
+                                100%
+                            </strong>
+
+                            <span>
+                                Experiencia Gamer
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- IMAGEN HERO -->
+
+                <div class="hero-image-container">
+
+                    <div class="hero-image-glow"></div>
+
+                    <img src="./img/categorias/wukong.jpg"
+                         alt="Black Myth: Wukong - Juego destacado"
+                         class="hero-image">
+
+                    <div class="hero-floating-card">
+
+                        <i class="fa-solid fa-fire"></i>
+
+                        <div>
+
+                            <span>
+                                DESTACADO
+                            </span>
+
+                            <strong>
+                                NUEVOS JUEGOS
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <section class="home-pulse">
+            <div class="container home-pulse-grid">
+                <a href="#destacados" class="home-pulse-card pulse-featured">
+                    <span class="pulse-icon"><i class="fa-solid fa-fire"></i></span>
+                    <span><small>AHORA EN PIXELVAULT</small><strong>JUEGOS DESTACADOS</strong></span>
+                    <i class="fa-solid fa-arrow-right pulse-arrow"></i>
+                </a>
+                <a href="#novedades" class="home-pulse-card pulse-new">
+                    <span class="pulse-icon"><i class="fa-solid fa-bolt"></i></span>
+                    <span><small>DESCUBRE</small><strong>NOVEDADES GAMING</strong></span>
+                    <i class="fa-solid fa-arrow-right pulse-arrow"></i>
+                </a>
+                <a href="ofertas.html" class="home-pulse-card pulse-offer">
+                    <span class="pulse-icon"><i class="fa-solid fa-tags"></i></span>
+                    <span><small>PARA TU BIBLIOTECA</small><strong>OFERTAS ESPECIALES</strong></span>
+                    <i class="fa-solid fa-arrow-right pulse-arrow"></i>
+                </a>
+                <a href="soporte.html" class="home-pulse-card pulse-support">
+                    <span class="pulse-icon"><i class="fa-solid fa-headset"></i></span>
+                    <span><small>¿NECESITAS AYUDA?</small><strong>SOPORTE PIXELVAULT</strong></span>
+                    <i class="fa-solid fa-arrow-right pulse-arrow"></i>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             FRANJA VISUAL PIXELVAULT
+        ================================================== -->
+        <section class="brand-strip">
+            <div class="container brand-strip-inner">
+                <span class="brand-strip-label">PIXELVAULT // GAME STORE</span>
+                <div class="brand-strip-items">
+                    <span><i class="fa-solid fa-bolt"></i> DISCOVER</span>
+                    <span><i class="fa-solid fa-gamepad"></i> PLAY</span>
+                    <span><i class="fa-solid fa-star"></i> EXPERIENCE</span>
+                </div>
+                <span class="brand-strip-code">PV-2026</span>
+            </div>
+        </section>
+
+        <!-- =================================================
+             CATEGORÍAS
+        ================================================== -->
+
+        
+
+
+
+
+        <section id="jugadores" class="player-style-section section">
+            <div class="container">
+                <div class="section-header player-style-header">
+                    <div class="section-heading">
+                        <span class="section-label">EXPLORA PIXELVAULT</span>
+                        <h2 class="section-title">¿QUÉ TIPO DE JUGADOR ERES?</h2>
+                    </div>
+                    <div class="section-description">
+                        <p>Elige una experiencia y descubre el catálogo que más se adapta a ti.</p>
+                    </div>
+                </div>
+                <div class="player-style-grid">
+
+                    <a href="categorias/accion.html" class="player-style-card player-style-action">
+                        <img src="./img/categorias/gta6.jpg" alt="Categoría Acción">
+                        <div class="player-style-overlay"></div>
+                        <div class="player-style-content">
+                            <span><i class="fa-solid fa-crosshairs"></i> SI BUSCAS ADRENALINA</span>
+                            <h3>ACCIÓN</h3>
+                            <p>Combate, velocidad y desafíos constantes.</p>
+                            <strong>EXPLORAR ACCIÓN <i class="fa-solid fa-arrow-right"></i></strong>
+                        </div>
+                    </a>
+
+                    <a href="categorias/aventura.html" class="player-style-card player-style-adventure">
+                        <img src="./img/categorias/ghost-of-tsushima.jpg" alt="Categoría Aventura">
+                        <div class="player-style-overlay"></div>
+                        <div class="player-style-content">
+                            <span><i class="fa-solid fa-compass"></i> SI QUIERES DESCUBRIR</span>
+                            <h3>AVENTURA</h3>
+                            <p>Mundos enormes, historias y secretos.</p>
+                            <strong>EXPLORAR AVENTURA <i class="fa-solid fa-arrow-right"></i></strong>
+                        </div>
+                    </a>
+
+                    <a href="categorias/rpg.html" class="player-style-card player-style-rpg">
+                        <img src="./img/categorias/elden-ring.jpg" alt="Categoría RPG">
+                        <div class="player-style-overlay"></div>
+                        <div class="player-style-content">
+                            <span><i class="fa-solid fa-dragon"></i> SI QUIERES SUMERGIRTE</span>
+                            <h3>RPG</h3>
+                            <p>Personajes, decisiones y grandes mundos.</p>
+                            <strong>EXPLORAR RPG <i class="fa-solid fa-arrow-right"></i></strong>
+                        </div>
+                    </a>
+
+                    <a href="categorias/terror.html" class="player-style-card player-style-horror">
+                        <img src="./img/categorias/silent-hill-2.jpg" alt="Categoría Terror">
+                        <div class="player-style-overlay"></div>
+                        <div class="player-style-content">
+                            <span><i class="fa-solid fa-skull"></i> SI TE GUSTA EL RIESGO</span>
+                            <h3>TERROR</h3>
+                            <p>Tensión, misterio y experiencias inquietantes.</p>
+                            <strong>EXPLORAR TERROR <i class="fa-solid fa-arrow-right"></i></strong>
+                        </div>
+                    </a>
+
+                    <a href="categorias/deportes.html" class="player-style-card player-style-sports">
+                        <img src="./img/categorias/fc26.jpg" alt="Categoría Deportes">
+                        <div class="player-style-overlay"></div>
+                        <div class="player-style-content">
+                            <span><i class="fa-solid fa-trophy"></i> SI TE GUSTA COMPETIR</span>
+                            <h3>DEPORTES</h3>
+                            <p>Velocidad, precisión y emoción en cada partida.</p>
+                            <strong>EXPLORAR DEPORTES <i class="fa-solid fa-arrow-right"></i></strong>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             SECCIÓN DESTACADOS
+        ================================================== -->
+
+        <section id="destacados"
+                 class="featured-section section">
+
+
+            <div class="container">
+
+
+                <div class="section-header">
+
+                    <div class="section-heading">
+
+                        <span class="section-label">
+                            SELECCIÓN PIXELVAULT
+                        </span>
+
+                        <h2 class="section-title">
+                            DESTACADOS
+                        </h2>
+
+                    </div>
+
+
+                    <a href="#jugadores"
+                       class="section-button">
+
+                        VER CATÁLOGO
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="featured-grid">
+
+
+                    <!-- JUEGO DESTACADO 1 -->
+
+                    <article class="featured-card flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+
+
+                        <div class="featured-image">
+
+                            <img src="./img/juegos/battlefield-6.jpg"
+                                 alt="Battlefield 6">
+
+
+                            <span class="featured-badge">
+                                RPG / ACCIÓN
+                            </span>
+
+                        </div>
+
+
+                        <div class="featured-info">
+
+                            <span class="game-category">
+                                RPG / ACCIÓN
+                            </span>
+
+                            <h3>
+                                Battlefield 6
+                            </h3>
+
+                            <p>
+                                Combate moderno, guerra total y acción multijugador.
+                            </p>
+
+
+                            <div class="game-bottom">
+
+                                <strong class="game-price">
+                                    $69.990
+                                </strong>
+
+                                <a href="#" class="game-button flip-trigger" role="button">
+
+                                    VER MÁS
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+<div class="flip-card-back">
+    <span class="flip-back-label"><i class="fa-solid fa-circle-info"></i> INFORMACIÓN DEL JUEGO</span>
+    <h3>Battlefield 6</h3>
+    <p class="flip-back-description">Guerra total, destrucción dinámica y combate multijugador a gran escala.</p>
+    <div class="flip-compatibility">
+        <span><strong>CPU</strong>Ryzen 5 5600 / Core i5-12400</span>
+        <span><strong>GPU</strong>RTX 2060 / RX 6600</span>
+        <span><strong>RAM</strong>16 GB RAM</span>
+        <span><strong>SSD</strong>80 GB disponibles</span>
+        <span><strong>RENDIMIENTO</strong>1080p · 60 FPS</span>
+        <span><strong>MODO</strong>Multijugador online</span>
+    </div>
+    <a href="#" class="game-button flip-back-trigger" role="button">VOLVER A TARJETA <i class="fa-solid fa-rotate-left"></i></a>
+</div>
+</div>
+</article>
+
+
+
+                    <!-- JUEGO DESTACADO 2 -->
+
+                    <article class="featured-card flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+
+
+                        <div class="featured-image">
+
+                            <img src="./img/juegos/arc-raiders.jpg"
+                                 alt="ARC Raiders">
+
+
+                            <span class="featured-badge">
+                                ACCIÓN
+                            </span>
+
+                        </div>
+
+
+                        <div class="featured-info">
+
+                            <span class="game-category">
+                                ACCIÓN
+                            </span>
+
+                            <h3>
+                                ARC Raiders
+                            </h3>
+
+                            <p>
+                                Acción cooperativa, supervivencia y combate futurista.
+                            </p>
+
+
+                            <div class="game-bottom">
+
+                                <strong class="game-price">
+                                    $39.990
+                                </strong>
+
+                                <a href="#" class="game-button flip-trigger" role="button">
+
+                                    VER MÁS
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+<div class="flip-card-back">
+    <span class="flip-back-label"><i class="fa-solid fa-circle-info"></i> INFORMACIÓN DEL JUEGO</span>
+    <h3>ARC Raiders</h3>
+    <p class="flip-back-description">Extracción, supervivencia y combate cooperativo contra máquinas en un mundo futurista.</p>
+    <div class="flip-compatibility">
+        <span><strong>CPU</strong>Ryzen 5 3600 / Core i5-10400</span>
+        <span><strong>GPU</strong>RTX 2060 / RX 6600</span>
+        <span><strong>RAM</strong>16 GB RAM</span>
+        <span><strong>SSD</strong>60 GB disponibles</span>
+        <span><strong>RENDIMIENTO</strong>1080p · 60 FPS</span>
+        <span><strong>MODO</strong>Cooperativo / Online</span>
+    </div>
+    <a href="#" class="game-button flip-back-trigger" role="button">VOLVER A TARJETA <i class="fa-solid fa-rotate-left"></i></a>
+</div>
+</div>
+</article>
+
+
+
+                    <!-- JUEGO DESTACADO 3 -->
+
+                    <article class="featured-card flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+
+
+                        <div class="featured-image">
+
+                            <img src="./img/juegos/assassins-creed-shadows.jpg"
+                                 alt="Assassin’s Creed Shadows">
+
+
+                            <span class="featured-badge">
+                                AVENTURA
+                            </span>
+
+                        </div>
+
+
+                        <div class="featured-info">
+
+                            <span class="game-category">
+                                AVENTURA
+                            </span>
+
+                            <h3>
+                                Assassin’s Creed Shadows
+                            </h3>
+
+                            <p>
+                                Explora el Japón feudal entre sigilo, combate y aventura.
+                            </p>
+
+
+                            <div class="game-bottom">
+
+                                <strong class="game-price">
+                                    $69.990
+                                </strong>
+
+                                <a href="#" class="game-button flip-trigger" role="button">
+
+                                    VER MÁS
+
+                                    <i class="fa-solid fa-arrow-right"></i>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+<div class="flip-card-back">
+    <span class="flip-back-label"><i class="fa-solid fa-circle-info"></i> INFORMACIÓN DEL JUEGO</span>
+    <h3>Assassin’s Creed Shadows</h3>
+    <p class="flip-back-description">Explora el Japón feudal entre sigilo, combate, exploración y una gran campaña narrativa.</p>
+    <div class="flip-compatibility">
+        <span><strong>CPU</strong>Ryzen 5 5600 / Core i5-12400</span>
+        <span><strong>GPU</strong>RTX 3060 / RX 6700 XT</span>
+        <span><strong>RAM</strong>16 GB RAM</span>
+        <span><strong>SSD</strong>100 GB disponibles</span>
+        <span><strong>RENDIMIENTO</strong>1080p · 60 FPS</span>
+        <span><strong>TIPO</strong>Acción / Aventura</span>
+    </div>
+    <a href="#" class="game-button flip-back-trigger" role="button">VOLVER A TARJETA <i class="fa-solid fa-rotate-left"></i></a>
+</div>
+</div>
+</article>
+
+
+                
+                    <article class="featured-card flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+                        <div class="featured-image">
+                            <img src="./img/juegos/accion/doom-the-dark-ages.jpg" alt="DOOM The Dark Ages">
+                            <span class="featured-badge">ACCIÓN</span>
+                        </div>
+                        <div class="featured-info">
+                            <span class="game-category">ACCIÓN / SHOOTER</span>
+                            <h3>DOOM: The Dark Ages</h3>
+                            <p>Combate demonios en una campaña medieval de ritmo frenético.</p>
+                            <div class="game-bottom">
+                                <strong class="game-price">$69.990</strong>
+                                <a href="#" class="game-button flip-trigger" role="button">VER MÁS <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+<div class="flip-card-back">
+    <span class="flip-back-label"><i class="fa-solid fa-circle-info"></i> INFORMACIÓN DEL JUEGO</span>
+    <h3>DOOM: The Dark Ages</h3>
+    <p class="flip-back-description">Combate demonios con acción intensa, armas pesadas y una campaña ambientada en una era medieval.</p>
+    <div class="flip-compatibility">
+        <span><strong>CPU</strong>Ryzen 5 3600 / Core i5-10400</span>
+        <span><strong>GPU</strong>RTX 2060 / RX 6600</span>
+        <span><strong>RAM</strong>16 GB RAM</span>
+        <span><strong>SSD</strong>100 GB disponibles</span>
+        <span><strong>RENDIMIENTO</strong>1080p · 60 FPS</span>
+        <span><strong>TIPO</strong>FPS / Acción</span>
+    </div>
+    <a href="#" class="game-button flip-back-trigger" role="button">VOLVER A TARJETA <i class="fa-solid fa-rotate-left"></i></a>
+</div>
+</div>
+</article>
+
+                    <article class="featured-card flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+                        <div class="featured-image">
+                            <img src="./img/juegos/rpg/elden-ring-nightreign.jpg" alt="Elden Ring Nightreign">
+                            <span class="featured-badge">RPG</span>
+                        </div>
+                        <div class="featured-info">
+                            <span class="game-category">RPG / ACCIÓN</span>
+                            <h3>Elden Ring: Nightreign</h3>
+                            <p>Enfrenta expediciones de fantasía oscura junto a otros jugadores.</p>
+                            <div class="game-bottom">
+                                <strong class="game-price">$39.990</strong>
+                                <a href="#" class="game-button flip-trigger" role="button">VER MÁS <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+<div class="flip-card-back">
+    <span class="flip-back-label"><i class="fa-solid fa-circle-info"></i> INFORMACIÓN DEL JUEGO</span>
+    <h3>Elden Ring: Nightreign</h3>
+    <p class="flip-back-description">Expediciones cooperativas, combates intensos y supervivencia en un mundo de fantasía oscura.</p>
+    <div class="flip-compatibility">
+        <span><strong>CPU</strong>Ryzen 5 3600 / Core i5-10400</span>
+        <span><strong>GPU</strong>GTX 1070 / RX 580</span>
+        <span><strong>RAM</strong>16 GB RAM</span>
+        <span><strong>SSD</strong>30 GB disponibles</span>
+        <span><strong>RENDIMIENTO</strong>1080p · 60 FPS</span>
+        <span><strong>MODO</strong>Cooperativo · 3 jugadores</span>
+    </div>
+    <a href="#" class="game-button flip-back-trigger" role="button">VOLVER A TARJETA <i class="fa-solid fa-rotate-left"></i></a>
+</div>
+</div>
+</article>
+
+                    <article class="featured-card flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+                        <div class="featured-image">
+                            <img src="./img/juegos/terror/resident-evil-requiem.jpg" alt="Resident Evil Requiem">
+                            <span class="featured-badge">TERROR</span>
+                        </div>
+                        <div class="featured-info">
+                            <span class="game-category">TERROR / SUPERVIVENCIA</span>
+                            <h3>Resident Evil Requiem</h3>
+                            <p>Una nueva pesadilla de supervivencia dentro del universo Resident Evil.</p>
+                            <div class="game-bottom">
+                                <strong class="game-price">$69.990</strong>
+                                <a href="#" class="game-button flip-trigger" role="button">VER MÁS <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+<div class="flip-card-back">
+    <span class="flip-back-label"><i class="fa-solid fa-circle-info"></i> INFORMACIÓN DEL JUEGO</span>
+    <h3>Resident Evil Requiem</h3>
+    <p class="flip-back-description">Una experiencia de horror y supervivencia con exploración, tensión y combates contra criaturas.</p>
+    <div class="flip-compatibility">
+        <span><strong>CPU</strong>Ryzen 5 5600 / Core i5-12400</span>
+        <span><strong>GPU</strong>RTX 3060 / RX 6600</span>
+        <span><strong>RAM</strong>16 GB RAM</span>
+        <span><strong>SSD</strong>80 GB disponibles</span>
+        <span><strong>RENDIMIENTO</strong>1080p · 60 FPS</span>
+        <span><strong>TIPO</strong>Survival Horror</span>
+    </div>
+    <a href="#" class="game-button flip-back-trigger" role="button">VOLVER A TARJETA <i class="fa-solid fa-rotate-left"></i></a>
+</div>
+</div>
+</article>
+
+</div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <section id="novedades" class="news-section section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-heading">
+                        <span class="section-label">RECIÉN LLEGADOS</span>
+                        <h2 class="section-title">NOVEDADES</h2>
+                    </div>
+                    <div class="section-description">
+                        <p>Descubre algunos de los lanzamientos que están marcando el catálogo.</p>
+                    </div>
+                </div>
+                <div class="news-featured">
+                    <article class="news-main-card">
+                        <img src="./img/juegos/aventura/death-stranding-2.jpg" alt="Death Stranding 2">
+                        <div class="news-main-overlay"></div>
+                        <div class="news-main-content">
+                            <span class="news-kicker"><i class="fa-solid fa-bolt"></i> NOVEDAD</span>
+                            <h3>DEATH STRANDING 2</h3>
+                            <p>Una nueva travesía cinematográfica por paisajes extremos y misteriosos.</p>
+                            <a href="novedades.html" class="btn btn-primary">DESCUBRIR <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <div class="news-side">
+                        <a href="novedades.html" class="news-mini-card">
+                            <img src="./img/juegos/deportes/f1-25.jpg" alt="F1 25">
+                            <div class="news-mini-overlay"></div>
+                            <div class="news-mini-content">
+                                <span>NOVEDAD / DEPORTES</span><h3>F1 25</h3><strong>$59.990</strong>
+                            </div>
+                        </article>
+                        <a href="novedades.html" class="news-mini-card">
+                            <img src="./img/juegos/terror/alan-wake-2.jpg" alt="Alan Wake 2">
+                            <div class="news-mini-overlay"></div>
+                            <div class="news-mini-content">
+                                <span>HORROR / NARRATIVO</span><h3>ALAN WAKE 2</h3><strong>$49.990</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             MOSAICO VISUAL PIXELVAULT
+        ================================================== -->
+        <section class="pixel-mosaic-section section">
+            <div class="container">
+                <div class="mosaic-heading">
+                    <div>
+                        <span class="section-label">PIXELVAULT / VISUAL ARCHIVE</span>
+                        <h2 class="section-title">MÁS QUE UNA COLECCIÓN</h2>
+                    </div>
+                    <span class="mosaic-index">PV // 2026</span>
+                </div>
+
+                <div class="pixel-mosaic">
+                    <div class="mosaic-card mosaic-large">
+                        <img src="./img/juegos/battlefield-6.jpg" alt="Battlefield 6">
+                        <div class="mosaic-overlay"></div>
+                        <span class="mosaic-number">01</span>
+                        <div class="mosaic-caption">
+                            <span>ACTION / FPS</span>
+                            <strong>BATTLEFIELD 6</strong>
+                        </div>
+                    </div>
+
+                    <div class="mosaic-card mosaic-top">
+                        <img src="./img/juegos/rpg/metaphor-refantazio.jpg" alt="Metaphor ReFantazio">
+                        <div class="mosaic-overlay"></div>
+                        <span class="mosaic-number">02</span>
+                        <div class="mosaic-caption">
+                            <span>RPG / FANTASÍA</span>
+                            <strong>METAPHOR</strong>
+                        </div>
+                    </div>
+
+                    <div class="mosaic-card mosaic-bottom">
+                        <img src="./img/juegos/terror/silent-hill-2.jpg" alt="Silent Hill 2">
+                        <div class="mosaic-overlay"></div>
+                        <span class="mosaic-number">03</span>
+                        <div class="mosaic-caption">
+                            <span>HORROR / PSICOLÓGICO</span>
+                            <strong>SILENT HILL 2</strong>
+                        </div>
+                    </div>
+
+                    <div class="mosaic-card mosaic-accent">
+                        <div class="mosaic-accent-inner">
+                            <span>PIXEL</span>
+                            <strong>VAULT</strong>
+                            <small>GAME STORE / CHILE</small>
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================================
+             BANNER PROMOCIONAL
+        ================================================== -->
+
+        <section id="ofertas"
+                 class="promo-section">
+
+
+            <div class="container promo-container">
+
+
+                <div class="promo-content">
+
+                    <span class="promo-label">
+                        OFERTAS ESPECIALES
+                    </span>
+
+                    <h2>
+                        ENCUENTRA TU PRÓXIMO
+                        <span>JUEGO FAVORITO</span>
+                    </h2>
+
+                    <p>
+                        Revisa nuestras categorías y descubre
+                        nuevas experiencias gaming.
+                    </p>
+
+                    <a href="ofertas.html"
+                       class="btn btn-primary">
+
+                        VER OFERTAS
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="promo-decoration">
+
+                    <i class="fa-solid fa-gamepad"></i>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CARACTERÍSTICAS
+        ================================================== -->
+
+        <section class="features-section section">
+
+
+            <div class="container">
+
+
+                <div class="features-grid">
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                        </div>
+
+                        <div class="feature-content">
+
+                            <h3>
+                                Compra segura
+                            </h3>
+
+                            <p>
+                                Una experiencia pensada
+                                para nuestros jugadores.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-gamepad"></i>
+
+                        </div>
+
+                        <div class="feature-content">
+
+                            <h3>
+                                Gran catálogo
+                            </h3>
+
+                            <p>
+                                Videojuegos para diferentes
+                                estilos y preferencias.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-tags"></i>
+
+                        </div>
+
+                        <div class="feature-content">
+
+                            <h3>
+                                Mejores ofertas
+                            </h3>
+
+                            <p>
+                                Encuentra oportunidades
+                                dentro de nuestro catálogo.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-headset"></i>
+
+                        </div>
+
+                        <div class="feature-content">
+
+                            <h3>
+                                Atención
+                            </h3>
+
+                            <p>
+                                Estamos disponibles para
+                                ayudarte.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             NOSOTROS
+        ================================================== -->
+
+        <section id="nosotros"
+                 class="about-section section">
+
+
+            <div class="container about-container">
+
+
+                <div class="about-image">
+
+                    <img src="./img/pixelvault-logo.jpg"
+                         alt="Experiencia PixelVault">
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <span class="section-label">
+                        PIXELVAULT
+                    </span>
+
+                    <h2>
+                        MÁS QUE UNA TIENDA,
+                        <span>UNA EXPERIENCIA GAMER</span>
+                    </h2>
+
+                    <p>
+                        Somos una PYME dedicada a la promoción
+                        y venta de videojuegos, ofreciendo un
+                        catálogo pensado para distintos tipos
+                        de jugadores.
+                    </p>
+
+                    <p>
+                        Nuestra plataforma permite explorar
+                        diferentes categorías y conocer los
+                        videojuegos disponibles.
+                    </p>
+
+                    <a href="#jugadores"
+                       class="btn btn-primary">
+
+                        EXPLORAR CATÁLOGO
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CALL TO ACTION
+        ================================================== -->
+
+        <section class="cta-section">
+
+
+            <div class="container cta-container">
+
+
+                <div class="cta-content">
+
+                    <span>
+                        ¿LISTO PARA JUGAR?
+                    </span>
+
+                    <h2>
+                        TU PRÓXIMA AVENTURA
+                        TE ESTÁ ESPERANDO.
+                    </h2>
+
+                    <a href="#jugadores"
+                       class="btn btn-light">
+
+                        COMENZAR A EXPLORAR
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer id="contacto"
+            class="footer">
+
+
+        <div class="container footer-container">
+
+
+            <!-- COLUMNA MARCA -->
+
+            <div class="footer-column footer-brand">
+
+                <a href="index.html"
+                   class="footer-logo">
+
+                    <span>
+                        PIXEL
+                    </span>VAULT
+
+                </a>
+
+
+                <p>
+                    Tu próxima aventura comienza
+                    en PixelVault.
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="#"
+                       aria-label="Instagram">
+
+                        <i class="fa-brands fa-instagram"></i>
+
+                    </a>
+
+                    <a href="#"
+                       aria-label="Facebook">
+
+                        <i class="fa-brands fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="#"
+                       aria-label="Discord">
+
+                        <i class="fa-brands fa-discord"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- NAVEGACIÓN -->
+
+            <div class="footer-column">
+
+                <h3>
+                    NAVEGACIÓN
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#jugadores">
+                            Categorías
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#destacados">
+                            Destacados
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#nosotros">
+                            Nosotros
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- CATEGORÍAS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    CATEGORÍAS
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="categorias/accion.html">
+                            Acción
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="categorias/aventura.html">
+                            Aventura
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="categorias/rpg.html">
+                            RPG
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="categorias/deportes.html">
+                            Deportes
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="categorias/terror.html">
+                            Terror
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- CONTACTO -->
+
+            <div class="footer-column">
+
+                <h3>
+                    CONTACTO
+                </h3>
+
+                <ul class="contact-list">
+
+                    <li>
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <span>
+                            contacto@pixelvault.cl
+                        </span>
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-headset"></i>
+
+                        <a href="soporte.html" class="support-link"> Soporte PixelVault </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <div class="container footer-bottom-content">
+
+                <p>
+                    © 2026 PixelVault.
+                    Todos los derechos reservados.
+                </p>
+
+                <div>
+
+                    <a href="#">
+                        Términos
+                    </a>
+
+                    <a href="#">
+                        Privacidad
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </footer>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* ==========================================
+       GIRO DE TARJETAS DESTACADAS
+       ========================================== */
+    document.querySelectorAll(".flip-card").forEach(function (card) {
+
+        const openButton = card.querySelector(".flip-trigger");
+        const closeButton = card.querySelector(".flip-back-trigger");
+
+        if (openButton) {
+            openButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                card.classList.add("is-flipped");
+            });
+        }
+
+        if (closeButton) {
+            closeButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                card.classList.remove("is-flipped");
+            });
+        }
+    });
+
+
+    /* ==========================================
+       BUSCADOR DE SECCIONES
+       ========================================== */
+    const searchButton = document.querySelector(".search-button");
+    const searchPanel = document.getElementById("sectionSearchPanel");
+    const closeSearch = document.getElementById("closeSectionSearch");
+    const searchInput = document.getElementById("sectionSearchInput");
+    const searchItems = Array.from(
+        document.querySelectorAll(".section-search-item")
+    );
+    const emptyMessage = document.getElementById("sectionSearchEmpty");
+
+    if (!searchButton || !searchPanel || !searchInput) return;
+
+    function openSearch() {
+        searchPanel.classList.add("active");
+        searchPanel.setAttribute("aria-hidden", "false");
+        document.body.classList.add("section-search-open");
+
+        setTimeout(function () {
+            searchInput.focus();
+        }, 120);
+    }
+
+    function closeSearchPanel() {
+        searchPanel.classList.remove("active");
+        searchPanel.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("section-search-open");
+
+        searchInput.value = "";
+        filterSections("");
+    }
+
+    function filterSections(value) {
+        const query = value.toLowerCase().trim();
+        let found = 0;
+
+        searchItems.forEach(function (item) {
+            const text = (
+                item.textContent + " " +
+                (item.dataset.search || "")
+            ).toLowerCase();
+
+            const matches = query === "" || text.includes(query);
+
+            item.style.display = matches ? "flex" : "none";
+
+            if (matches) {
+                found++;
+            }
+        });
+
+        if (emptyMessage) {
+            emptyMessage.style.display = found === 0 ? "block" : "none";
+        }
+    }
+
+    searchButton.addEventListener("click", function () {
+        openSearch();
+    });
+
+    closeSearch.addEventListener("click", function () {
+        closeSearchPanel();
+    });
+
+    searchInput.addEventListener("input", function () {
+        filterSections(this.value);
+    });
+
+    searchItems.forEach(function (item) {
+        item.addEventListener("click", function () {
+            closeSearchPanel();
+        });
+    });
+
+    searchPanel.addEventListener("click", function (event) {
+        if (event.target === searchPanel) {
+            closeSearchPanel();
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (
+            event.key === "Escape" &&
+            searchPanel.classList.contains("active")
+        ) {
+            closeSearchPanel();
+        }
+    });
+
+});
+</script>
+</body>
+
+</html>
