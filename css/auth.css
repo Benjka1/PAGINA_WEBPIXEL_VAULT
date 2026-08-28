@@ -1440,6 +1440,15 @@
 
 
 /* =========================================================
+   OPCIONES LOGIN
+   ========================================================= */
+
+.auth-options {
+    margin-bottom: 26px;
+}
+
+
+/* =========================================================
    MESSAGE
    ========================================================= */
 
@@ -1487,6 +1496,74 @@
 
 
 /* =========================================================
+   ACCIONES DEL FORMULARIO
+   ========================================================= */
+
+.auth-form-actions {
+
+    display: grid;
+
+    grid-template-columns: minmax(180px, .7fr) minmax(220px, 1fr);
+
+    gap: 12px;
+
+    margin-top: 20px;
+
+}
+
+.auth-reset {
+
+    width: 100%;
+
+    min-height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    border-radius: 11px;
+
+    background: rgba(255,255,255,.035);
+
+    color: #aeb4c0;
+
+    font-size: 10px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: transform .2s ease, border-color .2s ease, color .2s ease, background .2s ease;
+
+}
+
+.auth-reset:hover {
+
+    transform: translateY(-2px);
+
+    border-color: rgba(139,92,246,.45);
+
+    background: rgba(139,92,246,.08);
+
+    color: #ffffff;
+
+}
+
+.auth-reset:active {
+
+    transform: translateY(0);
+
+}
+
+/* =========================================================
    SUBMIT
    ========================================================= */
 
@@ -1504,7 +1581,7 @@
 
     gap: 12px;
 
-    margin-top: 20px;
+    margin-top: 0;
 
     border: 0;
 
@@ -2122,4 +2199,10 @@
 .auth-page .auth-card button,
 .auth-page .auth-card input {
     font-family: inherit;
+}
+
+@media (max-width: 640px) {
+    .auth-form-actions {
+        grid-template-columns: 1fr;
+    }
 }

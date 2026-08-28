@@ -7958,3 +7958,28 @@ body:has(.category-search, .catalog-summary, .catalog-callout) .featured-info {
     color: var(--color-text-dark);
     font-size: 11px;
 }
+
+
+/* =========================================================
+   PIXELVAULT - BOTÓN LIMPIAR FORMULARIO
+   ========================================================= */
+
+.support-submit.support-reset {
+    width: auto;
+    min-height: 40px;
+    margin-top: 22px;
+    padding: 10px 16px;
+    background: #555;
+    color: #ffffff;
+    border: 1px solid #666;
+    box-shadow: none;
+    font-size: 10px;
+}
+
+.support-submit.support-reset:hover {
+    background: #666;
+    border-color: #777;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}

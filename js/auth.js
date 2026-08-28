@@ -437,6 +437,27 @@ document.addEventListener("DOMContentLoaded", () => {
                     "La clave debe tener al menos 6 caracteres."
                 );
                 valid = false;
+            } else if (clave.length > 18) {
+                fieldState(
+                    fields.clave,
+                    errors.clave,
+                    "La clave no puede superar los 18 caracteres."
+                );
+                valid = false;
+            } else if (!/[0-9]/.test(clave)) {
+                fieldState(
+                    fields.clave,
+                    errors.clave,
+                    "La clave debe contener al menos un número."
+                );
+                valid = false;
+            } else if (!/[A-ZÁÉÍÓÚÑÜ]/.test(clave)) {
+                fieldState(
+                    fields.clave,
+                    errors.clave,
+                    "La clave debe contener al menos una letra mayúscula."
+                );
+                valid = false;
             }
 
             // REPETIR CLAVE - OBLIGATORIA
@@ -640,6 +661,45 @@ document.addEventListener("DOMContentLoaded", () => {
                 clearField(input, errors[key]);
                 clearStatus(status);
             });
+        });
+
+        // Botón LIMPIAR FORMULARIO: reinicia valores y mensajes visuales.
+        registerForm.addEventListener("reset", () => {
+            setTimeout(() => {
+                Object.keys(fields).forEach(key => {
+                    clearField(fields[key], errors[key]);
+                });
+
+                if (termsError) {
+                    termsError.textContent = "";
+                }
+
+                clearStatus(status);
+
+                const submitButton = registerForm.querySelector("button[type='submit']");
+                if (submitButton) {
+                    submitButton.disabled = false;
+                }
+
+                // Dejar las contraseñas nuevamente ocultas y restaurar los iconos.
+                [fields.clave, fields.confirmarClave].forEach(input => {
+                    if (!input) return;
+                    input.type = "password";
+
+                    const button = registerForm.querySelector(
+                        `.auth-password-toggle[data-target="${input.id}"]`
+                    );
+
+                    const icon = button?.querySelector("i");
+                    if (icon) {
+                        icon.classList.add("fa-eye");
+                        icon.classList.remove("fa-eye-slash");
+                    }
+
+                    button?.setAttribute("aria-label", "Mostrar contraseña");
+                    button?.setAttribute("title", "Mostrar contraseña");
+                });
+            }, 0);
         });
 
         terms?.addEventListener("change", () => {

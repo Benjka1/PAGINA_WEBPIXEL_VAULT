@@ -355,6 +355,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // =====================================================
+    // LIMPIAR FORMULARIO
+    // =====================================================
+
+    const botonLimpiar = document.getElementById("supportReset");
+
+    function limpiarFormularioCompleto() {
+
+        // Limpiar mensajes y estados visuales de validación.
+        [
+            nombre,
+            correo,
+            tipo,
+            motivo,
+            mensaje
+        ].forEach(campo => {
+            if (campo) {
+                limpiarError(campo);
+            }
+        });
+
+        // Limpiar el mensaje general del formulario.
+        const supportMessage = document.getElementById("supportMessage");
+
+        if (supportMessage) {
+            supportMessage.textContent = "";
+            supportMessage.className = "support-message";
+        }
+    }
+
+    if (botonLimpiar) {
+
+        botonLimpiar.addEventListener("click", () => {
+
+            // type="reset" se encarga de restaurar los valores.
+            // Esta función limpia además los mensajes visuales.
+            setTimeout(() => {
+                limpiarFormularioCompleto();
+            }, 0);
+
+        });
+
+    }
+
+
+    // =====================================================
     // SUBMIT
     // =====================================================
 
